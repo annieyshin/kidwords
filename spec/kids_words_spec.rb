@@ -39,7 +39,14 @@ describe("Word") do
     expect(word2.id()).to(eq(2))
   end
 end
-
-
-  # end
+describe(".find") do
+  it("finds an word based on its id") do
+    word = Word.new("emu")
+    word.save()
+    word2 = Word.new("balloon")
+    word2.save()
+    expect(Word.find(1)).to(eq(word))
+    expect(Word.find(2)).to(eq(word2))
+  end
+end
 end
