@@ -11,14 +11,14 @@ describe("Word") do
       expect(Word.all()).to(eq([]))
     end
   end
-  #
-  # describe("#save") do
-  #   it("saves an item to the list of items") do
-  #     item = Item.new("tacos")
-  #     item.save()
-  #     expect(Item.all()).to(eq([item]))
-  #   end
-  # end
+
+  describe("#save") do
+    it("saves a word to the list of words") do
+      word = Word.new("smallpox")
+      word.save()
+      expect(Word.all()).to(eq([word]))
+    end
+  end
 
   # describe(".clear") do
   #   it("clears all items from the list") do
