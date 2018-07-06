@@ -1,9 +1,17 @@
 <h1><%= @word.name %></h1>
 
+<% @list.each do |definition| %>
+  <h4><a href="/word/<%= word.id %>"><%= item.name %></a></h4>
+<% end %>
+
 <form action="/" method="post">
   <div class="form-group">
     <label for="name">Defintion</label>
     <input id="definition" name="definition" class="form-control" type="text">
   </div>
-  <button type="submit" class="btn btn-success">Define!</button>
+  <div class="form-group">
+    <label for="name">How about another defintion????</label>
+    <input id="definition2" name="definition" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn btn-success">Add!</button>
 </form>

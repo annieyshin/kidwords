@@ -2,9 +2,12 @@ class Word
   @@list = []
   attr_reader :id
   attr_accessor :name
+  attr_accessor :definition
+
 
   def initialize(name)
     @name = name
+    @definition = definition
     @id = @@list.length + 1
   end
 

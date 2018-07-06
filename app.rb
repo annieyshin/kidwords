@@ -18,7 +18,7 @@ post('/') do
   erb(:list)
 end
 
-#gets information from items page
+#gets information from word page
 get('/word/:id') do
   @word = Word.find(params[:id])
   erb(:word)
