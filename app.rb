@@ -12,14 +12,14 @@ end
 #sending information
 post('/') do
   name = params["name"]
-  item = Item.new(name)
+  item = Word.new(name)
   item.save()
-  @list = Item.all()
+  @list = Word.all()
   erb(:list)
 end
 
 #gets information from items page
-get('/items/:id') do
-  @item = Item.find(params[:id])
+get('/word/:id') do
+  @item = Word.find(params[:id])
   erb(:item)
 end

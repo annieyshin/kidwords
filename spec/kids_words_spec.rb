@@ -14,7 +14,7 @@ describe("Word") do
 
   describe("#save") do
     it("saves a word to the list of words") do
-      word = Word.new("smallpox")
+      word = Word.new("emu")
       word.save()
       expect(Word.all()).to(eq([word]))
     end
@@ -28,6 +28,17 @@ describe("Word") do
   #     expect(Item.all()).to(eq([]))
   #   end
   # end
+
+  describe("#id") do
+  it("increments an id by 1 each time a new word is added") do
+    word = Word.new("emu")
+    word.save()
+    word2 = Word.new("balloon")
+    word2.save()
+    expect(word.id()).to(eq(1))
+    expect(word2.id()).to(eq(2))
+  end
+end
 
 
   # end
