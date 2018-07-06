@@ -20,6 +20,6 @@ end
 
 #gets information from items page
 get('/word/:id') do
-  @item = Word.find(params[:id])
-  erb(:word_list)
+  @word = Word.find(params[:id])
+  erb(:word)
 end
