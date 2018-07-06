@@ -2,6 +2,8 @@
 
 <% @list.each do |word| %>
   <h4><a href="/word/<%= word.id %>"><%= word.name %></a></h4>
+  <!-- <h5><a href="/word/<%= word.id %>"><%= word.name %></a></h5> -->
+  <h5><%= word.name %></a></h5>
 <% end %>
 
 <h4>Add a FUN word to the list:</h4>
@@ -11,5 +13,5 @@
     <label for="name">Word</label>
     <input id="name" name="name" class="form-control" type="text">
   </div>
-  <button type="submit" class="btn">Go!</button>
+  <button type="submit" class="btn btn-danger">Go!</button>
 </form>

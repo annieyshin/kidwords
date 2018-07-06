@@ -1,1 +1,9 @@
 <h1><%= @word.name %></h1>
+
+<form action="/" method="post">
+  <div class="form-group">
+    <label for="name">Defintion</label>
+    <input id="definition" name="definition" class="form-control" type="text">
+  </div>
+  <button type="submit" class="btn btn-success">Define!</button>
+</form>
