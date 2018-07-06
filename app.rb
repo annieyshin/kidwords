@@ -5,15 +5,15 @@ require('./lib/kids_words')
 
 #home page is the /
 get('/') do
-  @list = Item.all()
+  @list = Word.all()
   erb(:list)
 end
 
 #sending information
 post('/') do
   name = params["name"]
-  item = Word.new(name)
-  item.save()
+  word = Word.new(name)
+  word.save()
   @list = Word.all()
   erb(:list)
 end
@@ -21,5 +21,5 @@ end
 #gets information from items page
 get('/word/:id') do
   @item = Word.find(params[:id])
-  erb(:item)
+  erb(:word_list)
 end

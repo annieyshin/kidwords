@@ -20,8 +20,8 @@ class Word
     @@list.push(self)
   end
 
-  def self.find(word)
-    word_id = word.to_i()
+  def self.find(id)
+    word_id = id.to_i()
     @@list.each do |word|
       if word.id == word_id
         return word

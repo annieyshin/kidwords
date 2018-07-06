@@ -20,14 +20,14 @@ describe("Word") do
     end
   end
 
-  # describe(".clear") do
-  #   it("clears all items from the list") do
-  #     item = Item.new("tacos")
-  #     item.save()
-  #     Item.clear()
-  #     expect(Item.all()).to(eq([]))
-  #   end
-  # end
+  describe(".clear") do
+    it("clears all words from the list") do
+      word = Word.new("emu")
+      word.save()
+      Word.clear()
+      expect(Word.all()).to(eq([]))
+    end
+  end
 
   describe("#id") do
   it("increments an id by 1 each time a new word is added") do
