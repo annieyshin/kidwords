@@ -18,7 +18,16 @@ post('/') do
   erb(:list)
 end
 
-#gets information from items page
+#sending information
+# post('/') do
+#   definition = params["definition"]
+#   word = Word.new(definition)
+# # word = Word.new(definition)
+#   word.save()
+#   @otherlist = Word.all()
+#   erb(:word)
+# end
+
 get('/word/:id') do
   @word = Word.find(params[:id])
   erb(:word)
