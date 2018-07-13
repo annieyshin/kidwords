@@ -1,9 +1,37 @@
 <h1><%= @word.name %></h1>
 
-<form action="/" method="post">
-  <div class="form-group">
-    <label for="name">Defintion</label>
-    <input id="definition" name="definition" class="form-control" type="text">
+<div class="container">
+  <div class="row">
+
+
+
+    <form action="/word/<%= @word.id %>" method="post">
+      <div class="form-group">
+        <label for="name">Defintion</label>
+        <input id="definition" name="definition" class="form-control" type="text">
+      </div>
+      <button type="submit" class="btn btn-info">Define!</button>
+    </form>
   </div>
-  <button type="submit" class="btn btn-success">Define!</button>
-</form>
+  <div class="row">
+    <br>
+    <form class="form-inline" method="get" action="/">
+          <button type="submit" class="btn btn-default" name="clear_btn">Back</button>
+
+          <%if @definition != nil%>
+
+                  <ul>
+                    <%@definition.each do |definition|%>
+                    <li> <%= definition[:definition] %> </li>
+                    <% end %>
+                  </ul>
+
+                <% else %>
+                    <p>Add definitions!</p>
+                <% end %>
+
+
+
+    </form>
+  </div>
+</div>

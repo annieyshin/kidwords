@@ -19,7 +19,7 @@ Website where user can enter words into a saved list of clickable links. When th
 ## Specs/Steps
 
 1. Example Input: User enters the word "butterflies", Example Output: The word "butterflies" will display in the words list
-2. Example Input: User clicks on the "butterflies" link and a page will open with a form and button to enter definition information, Example Output: The page should save the definition user entered and associate it with that word 
+2. Example Input: User clicks on the "butterflies" link and a page will open with a form and button to enter definition information, Example Output: The page should save the definition user entered and associate it with that word
 
 ## License
 
