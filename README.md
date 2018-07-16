@@ -10,7 +10,7 @@ Website where user can enter words into a saved list of clickable links. When th
 
 ## Setup/Contribution Requirements
 
-1. Clone the repo -or- go to: https://hidden-garden-65718.herokuapp.com/
+1. Clone the repo -or- go to: https://vast-plains-49890.herokuapp.com/
 
 ## Technologies Used
 
