@@ -1,5 +1,5 @@
 require('rspec')
-require('kids_words')
+require('words')
 
 describe("Word") do
   before() do
