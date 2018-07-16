@@ -26,3 +26,23 @@ Website where user can enter words into a saved list of clickable links. When th
 This software is licensed under the MIT license.
 
 Copyright (c)2018 **Annie Shin**
+
+
+  <form action="/word/<%= @word.id %>" method="post">
+
+
+  <ul>
+    <% @definition_list.definition.each do |definition| %>
+    <li> <%= definition.definition %> </li>
+    <% end %>
+  </ul>
+
+
+  #sending information
+  post('/word/:id') do
+    definition = params.fetch('definition')
+    word_definition = Definition.new(defintion)
+    word_definition.save()
+    @def_list = Definition.all()
+    erb(:word)
+  end

@@ -1,9 +1,11 @@
 require('pry')
 class Definition
   @@definition_list = []
-  attr_reader(:definition, :define_list)
+  attr_reader(:definition)
 
   def initialize(attributes)
+    @name = name
+    @id = @@list.length + 1
     @definition = attributes.fetch(:definition)
   end
 

@@ -1,7 +1,7 @@
 class Word
   @@list = []
   attr_reader :id
-  attr_accessor :name
+  attr_accessor :name, :definition
 
   def initialize(name)
     @name = name
@@ -22,15 +22,21 @@ class Word
     @@list.push(self)
   end
 
+  def definition_save(definition)
+    @definition.push(definition)
+  end
+
+  def definition_show
+    @definition
+  end
+
   def self.find(id)
-    word_find = nil
     word_id = id.to_i()
     @@list.each do |word|
       if word.id == word_id
-        word_find = word
+        return word
       end
     end
-    word_find
   end
 
 end

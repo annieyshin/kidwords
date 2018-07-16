@@ -1,7 +1,7 @@
 require('sinatra')
 require('sinatra/reloader')
 also_reload('lib/**/*.rb')
-require('./lib/kids_words')
+require('./lib/words')
 
 #home page is the /
 get('/') do
@@ -23,11 +23,9 @@ get('/word/:id') do
   erb(:word)
 end
 
-#sending information
 post('/word/:id') do
-  word_define = params["definition"]
-  word_definition = Definition.new(defintion)
-  word_definition.save()
-  @@def_list = Definition.all()
+  word = Word.find(params[:id])
+  definition = params['definition']
+  word.definition_save(definition)
   erb(:word)
 end
