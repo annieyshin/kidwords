@@ -1,10 +1,16 @@
 <h1><%= @word.name %></h1>
 
+<ul>
+  <% @word.definition.each do |definition| %>
+    <li><%= definition %></li>
+  <% end %>
+</ul>
+
 <div class="container">
   <div class="row">
     <form action="/word/<%= @word.id %>" method="post">
       <div class="form-group">
-        <label for="name">Defintion</label>
+        <label for="definition">Defintion</label>
         <input id="definition" name="definition" class="form-control" type="text">
       </div>
       <button type="submit" class="btn btn-info">Define!</button>

@@ -22,7 +22,7 @@ class Word
     @@list.push(self)
   end
 
-  def definition_save(definition)
+  def add_definition(definition)
     @definition.push(definition)
   end
 

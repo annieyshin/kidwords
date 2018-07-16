@@ -24,8 +24,8 @@ get('/word/:id') do
 end
 
 post('/word/:id') do
-  word = Word.find(params[:id])
-  definition = params['definition']
-  word.definition_save(definition)
+  @word = Word.find(params[:id])
+  definition = params["definition"]
+  @word.add_definition(params["definition"])
   erb(:word)
 end
