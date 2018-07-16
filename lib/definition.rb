@@ -1,28 +1,27 @@
 require('pry')
 class Definition
-  @@deflist = []
-
+  @@definition_list = []
   attr_reader(:definition, :define_list)
 
-  def initialize(definition)
-    @definition = []
-  end
-
-  def self.clear()
-    @@deflist = []
+  def initialize(attributes)
+    @definition = attributes.fetch(:definition)
   end
 
   def self.all
-    @@deflist
+    @@definition_list
+  end
+
+  def self.clear()
+    @@definition_list = []
   end
 
   def save
-    @@deflist.push(self)
+    @@definition_list.push(self)
   end
 
   def self.find(def_id)
     definition_id = def_id.to_i()
-    @@deflist.each do |definition|
+    @@definition_list.each do |definition|
       if definition.def_id == definition_id
         return definition
       end

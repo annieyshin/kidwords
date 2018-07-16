@@ -6,16 +6,16 @@ class Word
   def initialize(name)
     @name = name
     @id = @@list.length + 1
+    @definition = []
 
-  end
-
-  def self.clear()
-    @@list = []
   end
 
   def self.all()
     @@list
+  end
 
+  def self.clear()
+    @@list = []
   end
 
   def save()
@@ -23,12 +23,14 @@ class Word
   end
 
   def self.find(id)
+    word_find = nil
     word_id = id.to_i()
     @@list.each do |word|
       if word.id == word_id
-        return word
+        word_find = word
       end
     end
+    word_find
   end
 
 end
