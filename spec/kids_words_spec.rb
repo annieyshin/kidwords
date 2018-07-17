@@ -30,23 +30,32 @@ describe("Word") do
   end
 
   describe("#id") do
-  it("increments an id by 1 each time a new word is added") do
-    word = Word.new("emu")
-    word.save()
-    word2 = Word.new("balloon")
-    word2.save()
-    expect(word.id()).to(eq(1))
-    expect(word2.id()).to(eq(2))
+    it("increments an id by 1 each time a new word is added") do
+      word = Word.new("emu")
+      word.save()
+      word2 = Word.new("balloon")
+      word2.save()
+      expect(word.id()).to(eq(1))
+      expect(word2.id()).to(eq(2))
+    end
   end
-end
-describe(".find") do
-  it("finds an word based on its id") do
-    word = Word.new("emu")
-    word.save()
-    word2 = Word.new("balloon")
-    word2.save()
-    expect(Word.find(1)).to(eq(word))
-    expect(Word.find(2)).to(eq(word2))
+
+  describe(".find") do
+    it("finds an word based on its id") do
+      word = Word.new("emu")
+      word.save()
+      word2 = Word.new("balloon")
+      word2.save()
+      expect(Word.find(1)).to(eq(word))
+      expect(Word.find(2)).to(eq(word2))
+    end
   end
-end
+
+  describe("#add_definition") do
+    it("saves defintion to a list for any word") do
+      defintion = Word.new("a badass prehistoric looking bird")
+      defintion.add_definition(defintion)
+      expect(Word.all()).to(eq([]))
+    end
+  end
 end
