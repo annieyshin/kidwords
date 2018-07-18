@@ -10,7 +10,7 @@ Website where user can enter words into a saved list of clickable links. When th
 
 ## Setup/Contribution Requirements
 
-1. Clone the repo -or- go to: https://pure-headland-58202.herokuapp.com/
+1. Clone the repo -or- go to: https://afternoon-hamlet-93250.herokuapp.com/
 
 ## Technologies Used
 
